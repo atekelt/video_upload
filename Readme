@@ -1,6 +1,3 @@
-=== User login/Logout with Session using Prepared Staement ==
-UserLogin/ Logout System using prepared statement with Session functionality.
-
 Login with folloowing details 
 Username:admin@gmail.com
 Password:admin
@@ -8,4 +5,11 @@ Password:admin
 How To Use:
 1) Download/Clone Project
 2) Import Sql file which is in DB file folder.
-3) Run with localhost/login_with_prepared_statement/index.php
+
+Database Name : video_uploader
+    table names : table Videos 
+                : users
+DB user : admin
+DB PWD : no
+
+for database connection edit "/conn/connection.php"

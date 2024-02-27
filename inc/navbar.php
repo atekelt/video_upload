@@ -1,24 +1,21 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Health Advisor</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="dashboard.php">My Profile</a></li>
-        <li><a href="search_disease.php">Search Disease</a></li>
-        <!-- <li><a href="search_doctor.php">Search Doctor</a></li> -->
-        <li><a href="feedback.php">Feedback</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-
-        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    <a class="navbar-brand" href="#"><h4>Welcome,<?php echo $_SESSION['user_email']; ?></h4></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.php">Upload</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="view.php">Video List</a>
+        </li>
+        <li class="nav-item">
+          <a href="logout.php" class="nav-link text-danger"><strong>Logout</strong></a>
+        </li>
       </ul>
     </div>
   </div>
-</nav>
+</nav> 

@@ -1,15 +1,16 @@
-Login with folloowing details 
-Username:admin@gmail.com
-Password:admin
-
 How To Use:
 1) Download/Clone Project
-2) Import Sql file which is in DB file folder.
+2) Create databse 
+3) Import Sql file which is in DB file folder.
 
 Database Name : video_uploader
     table names : table Videos 
                 : users
 DB user : admin
 DB PWD : no
+
+Login with folloowing details 
+Username:admin@gmail.com
+Password:admin
 
 for database connection edit "/conn/connection.php"

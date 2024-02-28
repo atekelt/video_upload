@@ -6,7 +6,7 @@ if($_SESSION['user_email']==""){
 }
 include_once('inc/header.php');
 
-include 'Connections/DatabaseConnection.php';
+include 'Conn/connection.php';
 $link = mysqli_connect("localhost", "admin", "", "video_uploader");
 $conn = new mysqli("localhost", "admin", "", "video_uploader");
 if($link === false){
@@ -48,7 +48,7 @@ if ((($_FILES["file"]["type"] == "video/mp4")
       if ( !$result ) {
       trigger_error('query failed', E_USER_ERROR);
       }
-        echo "Stored in: " . "videos/" . $_FILES["file"]["name"]."<br><a href='index.html'>Go Back</a>";
+        echo "Stored in: " . "videos/" . $_FILES["file"]["name"]."<br><a href='view.php'>Go to Video List</a>";
         }
   }
 }

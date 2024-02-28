@@ -10,6 +10,7 @@
 
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
               <p class="text-white-50 mb-5">Please enter your Username and password!</p>
+              
 			  <form action="login.php" method="POST">
 				<div class="form-outline form-white mb-4">
 				<input type="email" name="user_email" class="form-control"  value="<?php if(isset($_COOKIE["user_email"])) { echo $_COOKIE["user_email"]; } ?>" required>

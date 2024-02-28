@@ -45,12 +45,11 @@ if(!$mysqli){
 <div class="container">
 <h1 class="showText mt-3 mb-5">Uploaded Videos</h1>
 <?php
-if($sql="SELECT * FROM table_videos"){ 
+$sql="SELECT * FROM table_videos";
+if($result_set=mysqli_query($mysqli, $sql)){ 
 ?>
 	<div class="row">
 		<?php
-			
-			$result_set=mysqli_query($mysqli, $sql);
 			while($row=mysqli_fetch_array($result_set))
 			{
 			$pat ="videos/"; 
@@ -84,9 +83,12 @@ if($sql="SELECT * FROM table_videos"){
 	</div>
 <?php
 }
-else{
+
+
+if(mysqli_num_rows($result_set) == 0)
+{
 	?>
-	<h1>No Videos Uploaded!!!!!</h1>
-<?php
+	<h2>You Have Not Uploaded Any Video Yet!</h2>
+	<?php
 }
 ?>

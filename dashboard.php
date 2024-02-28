@@ -19,6 +19,7 @@ include_once('inc/navbar.php');
 
               <h2 class="fw-bold mb-2 text-uppercase">Video Uploader</h2>
               <p class="text-white-50 mb-5"></p>
+              
               <form name="myform" onSubmit="return validateForm()" method="post" action="upload_video.php" enctype="multipart/form-data">
 
                 <div class="form-outline form-white mb-4">
@@ -40,7 +41,8 @@ include_once('inc/navbar.php');
                 </div>
 
                 <input type="submit" name="submit" value="Upload Video" class="btn btn-outline-light btn-lg px-5"/>
-              
+                <br>
+                <a class="text-danger" id="error"></a>
 			        </form>
             </div>
 

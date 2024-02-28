@@ -6,6 +6,9 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-auto">
+          <a href="rss.xml"> <img src="image/rss.png" alt="rss logo" width="30px"> </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="dashboard.php">Upload</a>
         </li>

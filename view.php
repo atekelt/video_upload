@@ -44,6 +44,17 @@ if(!$mysqli){
 ?>
 <div class="container">
 <h1 class="showText mt-3 mb-5">Uploaded Videos</h1>
+<?php 
+if(!empty($_GET['msg'])) {
+    $msg = $_GET['msg'];
+	?>
+	<div class="alert alert-success" id="msg">
+  		<strong><?php echo $msg ?></strong>
+	</div>
+	<?php
+}
+	
+?>
 <?php
 $sql="SELECT * FROM table_videos";
 if($result_set=mysqli_query($mysqli, $sql)){ 
@@ -74,6 +85,7 @@ if($result_set=mysqli_query($mysqli, $sql)){
 					<a class="card-title"><b>File Name : </b> <?php echo $row['video_name'].'.'.$row['file_type'] ?></a><br>
 					<a class="card-title"><b>File Size : </b><?php echo $final_size?></a><br>
 					<a class="card-title"><b>Uploaded By : </b><?php echo $row['uploaded_by'] ?></a><br>
+					<a class="btn brn-sm btn-danger" onclick="del()" href="delete.php?id=<?php echo $row['_id']; ?>&file=<?php echo $row['video_name'].'.'.$row['file_type'] ?>">Delete</a>
 					</div>
 			</div>
 		</div>
@@ -91,4 +103,7 @@ if(mysqli_num_rows($result_set) == 0)
 	<h2>You Have Not Uploaded Any Video Yet!</h2>
 	<?php
 }
+?>
+<?php 
+include_once('inc/footer.php');
 ?>

@@ -1,5 +1,5 @@
 
-<script src="js/bootstrap.js"></script>
+
 </body>
 <script type="text/javascript">
 	function del(){
@@ -11,6 +11,10 @@
 			return false;
 		}
 	}
+
+	setTimeout(function(){
+     $('#msg').remove();
+},3000);
 
 </script>
 </html>

@@ -52,3 +52,7 @@ include_once('inc/navbar.php');
     </div>
   </div>
 </section>
+
+<?php 
+include_once('inc/footer.php');
+?>

@@ -4,7 +4,7 @@ if($_SESSION['user_email']==""){
 	header('location:index.php');
 
 }
-include_once('inc/header.php');
+
 
 include 'Conn/connection.php';
 $link = mysqli_connect("localhost", "admin", "", "video_uploader");
@@ -48,7 +48,7 @@ if ((($_FILES["file"]["type"] == "video/mp4")
       if ( !$result ) {
       trigger_error('query failed', E_USER_ERROR);
       }
-        echo "Stored in: " . "videos/" . $_FILES["file"]["name"]."<br><a href='view.php'>Go to Video List</a>";
+        header("Location: view.php?msg=File Uploaded Successfully.");
         }
   }
 }
@@ -56,4 +56,7 @@ else
   {
   echo "Invalid file";
   }
+?>
+<?php 
+include_once('inc/footer.php');
 ?>
